@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Titanic</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Titanic">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Titanic</h1>
+    <h2>in two dimensions</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Reproducible Pitch &#39;Titanic&#39;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>For this assigment, I thought it would be nice to use an other data set then the all too familiar &quot;mtcars&quot; and &quot;HairEyeColor&quot;, so I chose &quot;Titanic&quot;.</p>
+
+<p>This dataset attributes four categories to all the people who were onboard the Titanic: which class they were in, whether they were male or female, adult or child and whether they survived or not.</p>
+
+<p>The default plot function show all four categories in a so called mosaic plot:</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Reproducible Pitch &#39;Titanic&#39;</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data(&quot;Titanic&quot;)
+mosaicplot(Titanic,color = 4:5)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Reproducible Pitch &#39;Titanic&#39;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>And although it is a great plot, it can be a little too much to grasp at first sight. So I thought it would be neat to reduce the complexity by showing only two categories at a time. </p>
+
+<p>Furthermore the user will be able to select the categories.</p>
+
+<p>The mosaicplot function offers a nice feature to select only the categories you wish too see. For instance, let&#39;s show the categories &quot;Class&quot; and &quot;Survived&quot;:</p>
+
+<pre><code>mosaicplot(~ Class + Survived, data = Titanic, color = 4:5)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Reproducible Pitch &#39;Titanic&#39;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using this function template, I was able to create an interactive plot, where the user can select the categories he/she wishes to see, by pressing one or two radio buttons and the plot is immediately updated with the selected categories.</p>
+
+<p>Check it out on: <a><a href="https://robhofstra.shinyapps.io/Titanic">https://robhofstra.shinyapps.io/Titanic</a></a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Reproducible Pitch &#39;Titanic&#39;'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Reproducible Pitch &#39;Titanic&#39;'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Reproducible Pitch &#39;Titanic&#39;'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Reproducible Pitch &#39;Titanic&#39;'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
